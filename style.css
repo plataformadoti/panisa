@@ -2,14 +2,15 @@ body {
             font-family: 'Roboto', sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Altera para alinhar no topo */
             align-items: center;
             min-height: 100vh;
             margin: 0;
             background-color: rgb(114, 47, 55);
             color: #FFFFFF;
             text-align: center;
-            overflow: hidden;
+            overflow-y: auto; /* Permite rolagem vertical */
+            overflow-x: hidden; /* Esconde rolagem horizontal */
             position: relative;
         }
         .header {
@@ -41,6 +42,7 @@ body {
             margin-top: 20px;
             margin-bottom: 20px;
             box-sizing: border-box;
+            flex-shrink: 0; /* Impede que o container encolha */
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-50px); }
@@ -161,4 +163,5 @@ body {
                 font-size: 1.2em;
             }
         }
+
 
